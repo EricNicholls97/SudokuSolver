@@ -61,10 +61,6 @@ class ProgramTest {
     Sudoku sud = new Sudoku(input);
     
     var actual = sud.solve();
-   
-    System.out.println("HELLO");
-    
-    System.out.println("Hello2");
     
     
     System.out.println("\nTest 1: " + expected.equals(actual));

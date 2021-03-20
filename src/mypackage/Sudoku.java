@@ -59,6 +59,8 @@ public class Sudoku {
 		
 	}
 	 
+	
+	
 //	private void print_array() {
 //		int j = 0;
 //		for(List<Integer> arr : board_param) {
