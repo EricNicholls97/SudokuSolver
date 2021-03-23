@@ -18,12 +18,30 @@ public class Square {
 		}
 	}
 	
+	public int getValue() {
+		return value;
+	}
+	
 	public boolean isPoss(int val) {
 		return poss_arr[val] == true;
 	}
 	
-	public void removePoss(int val) {
+	// @return	true if it sets the value, false ow
+	public boolean removePoss(int val) {
+		if(!poss_arr[val])
+			return false;
 		poss_arr[val] = false;
+		arr_size--;
+		if(arr_size==1) {
+			for(int i=1; i<=9; i++) {
+				if(poss_arr[i]) {
+					value = i;
+					return true;
+				}
+			}
+			System.out.println();
+		}
+		return false;
 	}
 	
 	
@@ -41,5 +59,4 @@ public class Square {
 		s += ")  ";
 		return s;
 	}
-	
 }
